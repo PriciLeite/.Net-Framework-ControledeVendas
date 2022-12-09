@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Controle_de_Vendas.br.com.projeto.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,27 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnnovo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            cliente obj = new Cliente();
+            obj.nome = txtnome.Text;
+        }
+
+        private void Btnexcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btneditar_Click(object sender, EventArgs e)
         {
 
         }
