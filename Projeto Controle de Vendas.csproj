@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="br.com.projeto.conexao\ConnectionFactory.cs" />
+    <Compile Include="br.com.projeto.dao\ClienteDAO.cs" />
     <Compile Include="br.com.projeto.model\Cliente.cs" />
     <Compile Include="br.com.projeto.view\cliente.cs" />
     <Compile Include="br.com.projeto.view\Frmclientes.cs">
@@ -131,9 +132,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="br.com.projeto.dao\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\salao.jpg" />
   </ItemGroup>
