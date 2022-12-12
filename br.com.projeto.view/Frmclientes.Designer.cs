@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabclientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtestado = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtcomplemento = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.txtcidade = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtbairro = new System.Windows.Forms.TextBox();
@@ -65,10 +70,6 @@
             this.Btneditar = new System.Windows.Forms.Button();
             this.Btnsalvar = new System.Windows.Forms.Button();
             this.Btnexcluir = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtcomplemento = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtestado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabclientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -84,7 +85,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 117);
+            this.panel1.Size = new System.Drawing.Size(1017, 117);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -105,10 +106,10 @@
             this.tabclientes.Controls.Add(this.tabPage2);
             this.tabclientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabclientes.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabclientes.Location = new System.Drawing.Point(12, 132);
+            this.tabclientes.Location = new System.Drawing.Point(22, 132);
             this.tabclientes.Name = "tabclientes";
             this.tabclientes.SelectedIndex = 0;
-            this.tabclientes.Size = new System.Drawing.Size(870, 408);
+            this.tabclientes.Size = new System.Drawing.Size(953, 408);
             this.tabclientes.TabIndex = 1;
             // 
             // tabPage1
@@ -147,10 +148,76 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(862, 371);
+            this.tabPage1.Size = new System.Drawing.Size(945, 371);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastrar";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // txtestado
+            // 
+            this.txtestado.FormattingEnabled = true;
+            this.txtestado.Items.AddRange(new object[] {
+            "RO",
+            "AC",
+            "AM",
+            "RR",
+            "PA",
+            "AP",
+            "TO",
+            "MA",
+            "PI",
+            "CE",
+            "RN",
+            "PB",
+            "PE",
+            "AL",
+            "SE",
+            "BA",
+            "MG",
+            "ES",
+            "RJ",
+            "SP",
+            "PR",
+            "SC",
+            "RS",
+            "MS",
+            "MT",
+            "GO",
+            "DF"});
+            this.txtestado.Location = new System.Drawing.Point(601, 310);
+            this.txtestado.Name = "txtestado";
+            this.txtestado.Size = new System.Drawing.Size(131, 33);
+            this.txtestado.TabIndex = 28;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.RosyBrown;
+            this.label16.Location = new System.Drawing.Point(509, 314);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 24);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "UF:";
+            // 
+            // txtcomplemento
+            // 
+            this.txtcomplemento.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtcomplemento.Location = new System.Drawing.Point(601, 266);
+            this.txtcomplemento.Name = "txtcomplemento";
+            this.txtcomplemento.Size = new System.Drawing.Size(232, 31);
+            this.txtcomplemento.TabIndex = 25;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.RosyBrown;
+            this.label15.Location = new System.Drawing.Point(509, 270);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 24);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Compl:";
             // 
             // txtcidade
             // 
@@ -257,7 +324,7 @@
             this.txtcelular.Location = new System.Drawing.Point(406, 170);
             this.txtcelular.Mask = "(99) 0 0000-0000";
             this.txtcelular.Name = "txtcelular";
-            this.txtcelular.Size = new System.Drawing.Size(158, 31);
+            this.txtcelular.Size = new System.Drawing.Size(173, 31);
             this.txtcelular.TabIndex = 13;
             // 
             // label8
@@ -358,10 +425,12 @@
             // txtnome
             // 
             this.txtnome.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtnome.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnome.Location = new System.Drawing.Point(137, 70);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(351, 31);
+            this.txtnome.Size = new System.Drawing.Size(351, 29);
             this.txtnome.TabIndex = 3;
+            this.txtnome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtnome.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
@@ -378,10 +447,12 @@
             // txtcodigo
             // 
             this.txtcodigo.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtcodigo.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcodigo.Location = new System.Drawing.Point(137, 19);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(87, 31);
+            this.txtcodigo.Size = new System.Drawing.Size(87, 29);
             this.txtcodigo.TabIndex = 1;
+            this.txtcodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -406,17 +477,18 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(862, 371);
+            this.tabPage2.Size = new System.Drawing.Size(945, 371);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consultar";
             this.tabPage2.UseWaitCursor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // btnpesquisar
             // 
             this.btnpesquisar.BackColor = System.Drawing.Color.DimGray;
             this.btnpesquisar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnpesquisar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnpesquisar.Location = new System.Drawing.Point(493, 23);
+            this.btnpesquisar.Location = new System.Drawing.Point(469, 27);
             this.btnpesquisar.Name = "btnpesquisar";
             this.btnpesquisar.Size = new System.Drawing.Size(112, 38);
             this.btnpesquisar.TabIndex = 8;
@@ -429,18 +501,30 @@
             this.tabelacliente.AllowUserToAddRows = false;
             this.tabelacliente.AllowUserToDeleteRows = false;
             this.tabelacliente.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.tabelacliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabelacliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tabelacliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelacliente.Location = new System.Drawing.Point(38, 88);
+            this.tabelacliente.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.tabelacliente.Location = new System.Drawing.Point(14, 88);
             this.tabelacliente.Name = "tabelacliente";
             this.tabelacliente.ReadOnly = true;
-            this.tabelacliente.Size = new System.Drawing.Size(762, 251);
+            this.tabelacliente.Size = new System.Drawing.Size(906, 259);
             this.tabelacliente.TabIndex = 7;
             this.tabelacliente.UseWaitCursor = true;
+            this.tabelacliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelacliente_CellContentClick);
             // 
             // txtpesquisa
             // 
             this.txtpesquisa.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtpesquisa.Location = new System.Drawing.Point(109, 27);
+            this.txtpesquisa.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtpesquisa.Location = new System.Drawing.Point(85, 31);
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(351, 31);
             this.txtpesquisa.TabIndex = 4;
@@ -451,7 +535,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label14.Location = new System.Drawing.Point(39, 31);
+            this.label14.Location = new System.Drawing.Point(15, 35);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 24);
             this.label14.TabIndex = 3;
@@ -464,7 +548,7 @@
             this.Btnnovo.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Btnnovo.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnnovo.ForeColor = System.Drawing.Color.Transparent;
-            this.Btnnovo.Location = new System.Drawing.Point(153, 546);
+            this.Btnnovo.Location = new System.Drawing.Point(244, 546);
             this.Btnnovo.Name = "Btnnovo";
             this.Btnnovo.Size = new System.Drawing.Size(109, 37);
             this.Btnnovo.TabIndex = 13;
@@ -479,7 +563,7 @@
             this.Btneditar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Btneditar.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btneditar.ForeColor = System.Drawing.Color.Transparent;
-            this.Btneditar.Location = new System.Drawing.Point(655, 546);
+            this.Btneditar.Location = new System.Drawing.Point(649, 546);
             this.Btneditar.Name = "Btneditar";
             this.Btneditar.Size = new System.Drawing.Size(109, 37);
             this.Btneditar.TabIndex = 14;
@@ -494,7 +578,7 @@
             this.Btnsalvar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Btnsalvar.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnsalvar.ForeColor = System.Drawing.Color.Transparent;
-            this.Btnsalvar.Location = new System.Drawing.Point(321, 546);
+            this.Btnsalvar.Location = new System.Drawing.Point(379, 546);
             this.Btnsalvar.Name = "Btnsalvar";
             this.Btnsalvar.Size = new System.Drawing.Size(109, 37);
             this.Btnsalvar.TabIndex = 15;
@@ -509,7 +593,7 @@
             this.Btnexcluir.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Btnexcluir.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnexcluir.ForeColor = System.Drawing.Color.Transparent;
-            this.Btnexcluir.Location = new System.Drawing.Point(491, 546);
+            this.Btnexcluir.Location = new System.Drawing.Point(518, 546);
             this.Btnexcluir.Name = "Btnexcluir";
             this.Btnexcluir.Size = new System.Drawing.Size(109, 37);
             this.Btnexcluir.TabIndex = 16;
@@ -518,85 +602,21 @@
             this.Btnexcluir.UseWaitCursor = true;
             this.Btnexcluir.Click += new System.EventHandler(this.Btnexcluir_Click);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label15.Location = new System.Drawing.Point(509, 270);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 24);
-            this.label15.TabIndex = 24;
-            this.label15.Text = "Compl:";
-            // 
-            // txtcomplemento
-            // 
-            this.txtcomplemento.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtcomplemento.Location = new System.Drawing.Point(601, 266);
-            this.txtcomplemento.Name = "txtcomplemento";
-            this.txtcomplemento.Size = new System.Drawing.Size(232, 31);
-            this.txtcomplemento.TabIndex = 25;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label16.Location = new System.Drawing.Point(509, 314);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 24);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "UF:";
-            // 
-            // txtestado
-            // 
-            this.txtestado.FormattingEnabled = true;
-            this.txtestado.Items.AddRange(new object[] {
-            "RO",
-            "AC",
-            "AM",
-            "RR",
-            "PA",
-            "AP",
-            "TO",
-            "MA",
-            "PI",
-            "CE",
-            "RN",
-            "PB",
-            "PE",
-            "AL",
-            "SE",
-            "BA",
-            "MG",
-            "ES",
-            "RJ",
-            "SP",
-            "PR",
-            "SC",
-            "RS",
-            "MS",
-            "MT",
-            "GO",
-            "DF"});
-            this.txtestado.Location = new System.Drawing.Point(601, 310);
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(131, 33);
-            this.txtestado.TabIndex = 28;
-            // 
             // Frmclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 595);
+            this.ClientSize = new System.Drawing.Size(1017, 602);
             this.Controls.Add(this.Btnexcluir);
             this.Controls.Add(this.Btnsalvar);
             this.Controls.Add(this.Btneditar);
             this.Controls.Add(this.Btnnovo);
             this.Controls.Add(this.tabclientes);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Frmclientes";
             this.Text = "Cadastro de Cliente";
+            this.Load += new System.EventHandler(this.Frmclientes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabclientes.ResumeLayout(false);

@@ -85,5 +85,22 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         {
 
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frmclientes_Load(object sender, EventArgs e)
+        {
+            tabelacliente.DefaultCellStyle.ForeColor = Color.Black;
+            ClienteDAO dao = new ClienteDAO();
+            tabelacliente.DataSource = dao.listarCliente();
+        }
+
+        private void tabelacliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

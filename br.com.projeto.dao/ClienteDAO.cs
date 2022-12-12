@@ -5,6 +5,7 @@ using Projeto_Controle_de_Vendas.br.com.projeto.model;
 using Projeto_Controle_de_Vendas.br.com.projeto.view;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
@@ -71,8 +72,50 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.dao
 
 
         }
+
         #endregion
 
-        
+        #region ListarClientes
+        public DataTable listarCliente()
+        {
+            try
+            {
+                // 1) Criar o DataTable e o  comando sql
+                DataTable tabelacliente = new DataTable();
+                string sql = "select * from tb_clientes";
+
+                // 2) Organizar o comando sql e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                // 3) Criar MySqlDataApter para preencher os dados do DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelacliente);
+
+                return tabelacliente;
+
+            }
+
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando sql" + erro);
+                return null;
+            }
+        }
+        #endregion
+
+
+
+
+
+
+
+
+
+
     }
 }
+
