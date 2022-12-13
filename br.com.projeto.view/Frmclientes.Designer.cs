@@ -1,4 +1,6 @@
-﻿namespace Projeto_Controle_de_Vendas.br.com.projeto.view
+﻿using System;
+
+namespace Projeto_Controle_de_Vendas.br.com.projeto.view
 {
     partial class Frmclientes
     {
@@ -85,7 +87,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1017, 117);
+            this.panel1.Size = new System.Drawing.Size(1257, 117);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -109,7 +111,7 @@
             this.tabclientes.Location = new System.Drawing.Point(22, 132);
             this.tabclientes.Name = "tabclientes";
             this.tabclientes.SelectedIndex = 0;
-            this.tabclientes.Size = new System.Drawing.Size(953, 408);
+            this.tabclientes.Size = new System.Drawing.Size(1187, 408);
             this.tabclientes.TabIndex = 1;
             // 
             // tabPage1
@@ -155,6 +157,7 @@
             // 
             // txtestado
             // 
+            this.txtestado.ForeColor = System.Drawing.Color.Gray;
             this.txtestado.FormattingEnabled = true;
             this.txtestado.Items.AddRange(new object[] {
             "RO",
@@ -203,6 +206,7 @@
             // txtcomplemento
             // 
             this.txtcomplemento.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtcomplemento.ForeColor = System.Drawing.Color.Gray;
             this.txtcomplemento.Location = new System.Drawing.Point(601, 266);
             this.txtcomplemento.Name = "txtcomplemento";
             this.txtcomplemento.Size = new System.Drawing.Size(232, 31);
@@ -222,6 +226,7 @@
             // txtcidade
             // 
             this.txtcidade.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtcidade.ForeColor = System.Drawing.Color.Gray;
             this.txtcidade.Location = new System.Drawing.Point(137, 310);
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(351, 31);
@@ -241,6 +246,7 @@
             // txtbairro
             // 
             this.txtbairro.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtbairro.ForeColor = System.Drawing.Color.Gray;
             this.txtbairro.Location = new System.Drawing.Point(137, 262);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(351, 31);
@@ -260,6 +266,7 @@
             // txtnumero
             // 
             this.txtnumero.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtnumero.ForeColor = System.Drawing.Color.Gray;
             this.txtnumero.Location = new System.Drawing.Point(803, 221);
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(44, 31);
@@ -279,6 +286,7 @@
             // txtendereco
             // 
             this.txtendereco.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtendereco.ForeColor = System.Drawing.Color.Gray;
             this.txtendereco.Location = new System.Drawing.Point(137, 221);
             this.txtendereco.Name = "txtendereco";
             this.txtendereco.Size = new System.Drawing.Size(351, 31);
@@ -406,6 +414,7 @@
             // txtemail
             // 
             this.txtemail.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtemail.ForeColor = System.Drawing.Color.Gray;
             this.txtemail.Location = new System.Drawing.Point(137, 123);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(351, 31);
@@ -425,12 +434,12 @@
             // txtnome
             // 
             this.txtnome.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtnome.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.ForeColor = System.Drawing.Color.Gray;
             this.txtnome.Location = new System.Drawing.Point(137, 70);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(351, 29);
+            this.txtnome.Size = new System.Drawing.Size(351, 30);
             this.txtnome.TabIndex = 3;
-            this.txtnome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtnome.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
@@ -447,10 +456,11 @@
             // txtcodigo
             // 
             this.txtcodigo.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtcodigo.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcodigo.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcodigo.ForeColor = System.Drawing.Color.Gray;
             this.txtcodigo.Location = new System.Drawing.Point(137, 19);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(87, 29);
+            this.txtcodigo.Size = new System.Drawing.Size(87, 30);
             this.txtcodigo.TabIndex = 1;
             this.txtcodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -472,12 +482,13 @@
             this.tabPage2.Controls.Add(this.tabelacliente);
             this.tabPage2.Controls.Add(this.txtpesquisa);
             this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.tabPage2.Font = new System.Drawing.Font("Bell MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.ForeColor = System.Drawing.Color.RosyBrown;
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(945, 371);
+            this.tabPage2.Size = new System.Drawing.Size(1179, 371);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consultar";
             this.tabPage2.UseWaitCursor = true;
@@ -487,14 +498,16 @@
             // 
             this.btnpesquisar.BackColor = System.Drawing.Color.DimGray;
             this.btnpesquisar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnpesquisar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnpesquisar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnpesquisar.Location = new System.Drawing.Point(469, 27);
+            this.btnpesquisar.Location = new System.Drawing.Point(473, 31);
             this.btnpesquisar.Name = "btnpesquisar";
             this.btnpesquisar.Size = new System.Drawing.Size(112, 38);
             this.btnpesquisar.TabIndex = 8;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
             this.btnpesquisar.UseWaitCursor = true;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // tabelacliente
             // 
@@ -504,7 +517,7 @@
             this.tabelacliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bell MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -515,16 +528,17 @@
             this.tabelacliente.Location = new System.Drawing.Point(14, 88);
             this.tabelacliente.Name = "tabelacliente";
             this.tabelacliente.ReadOnly = true;
-            this.tabelacliente.Size = new System.Drawing.Size(906, 259);
+            this.tabelacliente.Size = new System.Drawing.Size(1139, 259);
             this.tabelacliente.TabIndex = 7;
             this.tabelacliente.UseWaitCursor = true;
-            this.tabelacliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelacliente_CellContentClick);
+            this.tabelacliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelacliente_CellClick);
             // 
             // txtpesquisa
             // 
             this.txtpesquisa.BackColor = System.Drawing.SystemColors.Menu;
             this.txtpesquisa.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.txtpesquisa.Location = new System.Drawing.Point(85, 31);
+            this.txtpesquisa.ForeColor = System.Drawing.Color.Gray;
+            this.txtpesquisa.Location = new System.Drawing.Point(89, 35);
             this.txtpesquisa.Name = "txtpesquisa";
             this.txtpesquisa.Size = new System.Drawing.Size(351, 31);
             this.txtpesquisa.TabIndex = 4;
@@ -535,7 +549,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label14.Location = new System.Drawing.Point(15, 35);
+            this.label14.Location = new System.Drawing.Point(19, 39);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 24);
             this.label14.TabIndex = 3;
@@ -548,7 +562,7 @@
             this.Btnnovo.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Btnnovo.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnnovo.ForeColor = System.Drawing.Color.Transparent;
-            this.Btnnovo.Location = new System.Drawing.Point(244, 546);
+            this.Btnnovo.Location = new System.Drawing.Point(302, 546);
             this.Btnnovo.Name = "Btnnovo";
             this.Btnnovo.Size = new System.Drawing.Size(109, 37);
             this.Btnnovo.TabIndex = 13;
@@ -563,7 +577,7 @@
             this.Btneditar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Btneditar.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btneditar.ForeColor = System.Drawing.Color.Transparent;
-            this.Btneditar.Location = new System.Drawing.Point(649, 546);
+            this.Btneditar.Location = new System.Drawing.Point(780, 546);
             this.Btneditar.Name = "Btneditar";
             this.Btneditar.Size = new System.Drawing.Size(109, 37);
             this.Btneditar.TabIndex = 14;
@@ -578,7 +592,7 @@
             this.Btnsalvar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Btnsalvar.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnsalvar.ForeColor = System.Drawing.Color.Transparent;
-            this.Btnsalvar.Location = new System.Drawing.Point(379, 546);
+            this.Btnsalvar.Location = new System.Drawing.Point(461, 546);
             this.Btnsalvar.Name = "Btnsalvar";
             this.Btnsalvar.Size = new System.Drawing.Size(109, 37);
             this.Btnsalvar.TabIndex = 15;
@@ -593,7 +607,7 @@
             this.Btnexcluir.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Btnexcluir.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnexcluir.ForeColor = System.Drawing.Color.Transparent;
-            this.Btnexcluir.Location = new System.Drawing.Point(518, 546);
+            this.Btnexcluir.Location = new System.Drawing.Point(617, 546);
             this.Btnexcluir.Name = "Btnexcluir";
             this.Btnexcluir.Size = new System.Drawing.Size(109, 37);
             this.Btnexcluir.TabIndex = 16;
@@ -606,7 +620,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 602);
+            this.ClientSize = new System.Drawing.Size(1257, 602);
             this.Controls.Add(this.Btnexcluir);
             this.Controls.Add(this.Btnsalvar);
             this.Controls.Add(this.Btneditar);
@@ -672,5 +686,5 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox txtestado;
-    }
+    }    
 }
