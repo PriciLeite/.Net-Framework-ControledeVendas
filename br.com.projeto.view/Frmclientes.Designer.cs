@@ -35,6 +35,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.label1 = new System.Windows.Forms.Label();
             this.tabclientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.txtestado = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtcomplemento = new System.Windows.Forms.TextBox();
@@ -117,6 +118,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage1.Controls.Add(this.btnbuscar);
             this.tabPage1.Controls.Add(this.txtestado);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.txtcomplemento);
@@ -154,6 +156,21 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastrar";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnbuscar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnbuscar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnbuscar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnbuscar.Location = new System.Drawing.Point(752, 216);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(97, 35);
+            this.btnbuscar.TabIndex = 29;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.UseWaitCursor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txtestado
             // 
@@ -267,7 +284,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             // 
             this.txtnumero.BackColor = System.Drawing.SystemColors.Menu;
             this.txtnumero.ForeColor = System.Drawing.Color.Gray;
-            this.txtnumero.Location = new System.Drawing.Point(803, 221);
+            this.txtnumero.Location = new System.Drawing.Point(805, 310);
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(44, 31);
             this.txtnumero.TabIndex = 19;
@@ -277,7 +294,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label11.Location = new System.Drawing.Point(742, 225);
+            this.label11.Location = new System.Drawing.Point(744, 314);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 24);
             this.label11.TabIndex = 18;
@@ -309,7 +326,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.txtcep.BackColor = System.Drawing.SystemColors.Menu;
             this.txtcep.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtcep.Location = new System.Drawing.Point(601, 218);
-            this.txtcep.Mask = "##.###-###";
+            this.txtcep.Mask = "#####-###";
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(135, 31);
             this.txtcep.TabIndex = 15;
@@ -496,7 +513,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             // 
             // btnpesquisar
             // 
-            this.btnpesquisar.BackColor = System.Drawing.Color.DimGray;
+            this.btnpesquisar.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnpesquisar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnpesquisar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnpesquisar.ForeColor = System.Drawing.Color.Transparent;
@@ -543,6 +560,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.txtpesquisa.Size = new System.Drawing.Size(351, 31);
             this.txtpesquisa.TabIndex = 4;
             this.txtpesquisa.UseWaitCursor = true;
+            this.txtpesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesquisa_KeyPress);
             // 
             // label14
             // 
@@ -643,6 +661,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
 
         }
 
+
         #endregion
 
         private System.Windows.Forms.Panel panel1;
@@ -686,5 +705,6 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox txtestado;
+        private System.Windows.Forms.Button btnbuscar;
     }    
 }

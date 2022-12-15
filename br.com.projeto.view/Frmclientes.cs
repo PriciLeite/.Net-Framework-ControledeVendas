@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,6 +42,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
+
 
         }
 
@@ -217,7 +219,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         #endregion
 
 
-        #region Pesquisar - btnpesquisar:
+        #region Buscar por Nome - btnpesquisar:
 
         private void btnpesquisar_Click(object sender, EventArgs e)
         {
@@ -226,10 +228,62 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             ClienteDAO dao = new ClienteDAO();
             tabelacliente.DataSource = dao.BuscarClientePorNome(nome);
 
-            
+            if (tabelacliente.Rows.Count == 0)
+            {
+                // atualizar o DataGredView
+                tabelacliente.DataSource = dao.listarCliente();
+            }
         }
         #endregion
 
+
+        #region Listar por Nome - txtpesquisar:
+
+        private void txtpesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string nome = "%" + txtpesquisa.Text + "%";
+
+            ClienteDAO dao = new ClienteDAO();
+            tabelacliente.DataSource = dao.ListarClientePorNome(nome);
+        }
+        #endregion
+
+
+        #region Buscar Cep - btnbuscar:
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {   
+                // Inicializando botão Buscar - Cep.
+                string cep = txtcep.Text;
+                string xml = "https://viacep.com.br/ws/"+cep+"/xml/ ";
+
+                DataSet dados = new DataSet();
+
+                dados.ReadXml(xml);
+                
+                txtendereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+                txtcomplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                txtbairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+                txtcidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+                txtestado.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+
+
+
+            }
+            catch(Exception erro)
+            {
+
+                MessageBox.Show("Endereço não encontrado. Por favor, digite-o manualmente!" + erro);
+
+            }
+            
+
+        }
+        #endregion
+
+
+
     }
+
 }
- 

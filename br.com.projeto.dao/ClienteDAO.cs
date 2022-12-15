@@ -252,7 +252,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.dao
         #endregion
 
 
-        #region Pesquisar - Buscar cliente por nome:
+        #region Buscar por Nome:
 
         public DataTable BuscarClientePorNome(string nome)
         {
@@ -292,6 +292,45 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.dao
         #endregion
 
 
+
+        #region Listar cliente por Nome - txtpesquisa:
+
+        public DataTable ListarClientePorNome(string nome)
+        {
+            try
+            {
+                // 1) Criar o DataTable e o  comando sql
+                DataTable tabelacliente = new DataTable();
+                string sql = "select * from tb_clientes where nome like @nome";
+
+
+                // 2) Organizar o comando sql e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                // 3) Criar MySqlDataAdapter para preencher os dados do DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelacliente);
+                conexao.Close();
+
+                return tabelacliente;
+
+
+            }
+
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando sql" + erro);
+                return null;
+            }
+        }
+        #endregion
 
     }
 }
