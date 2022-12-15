@@ -25,7 +25,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.dao
         }
 
 
-        // Métodos: 
+        // Formulário Cliente - Métodos: 
 
        #region CadastrarCliente
 

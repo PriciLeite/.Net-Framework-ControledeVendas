@@ -59,15 +59,5 @@ namespace Projeto_Controle_de_Vendas.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap salao {
-            get {
-                object obj = ResourceManager.GetObject("salao", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

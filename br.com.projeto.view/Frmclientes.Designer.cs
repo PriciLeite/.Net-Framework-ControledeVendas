@@ -150,7 +150,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(945, 371);
+            this.tabPage1.Size = new System.Drawing.Size(1179, 371);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastrar";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -329,10 +329,10 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             // 
             this.txtcelular.BackColor = System.Drawing.SystemColors.Menu;
             this.txtcelular.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtcelular.Location = new System.Drawing.Point(406, 170);
-            this.txtcelular.Mask = "(99) 0 0000-0000";
+            this.txtcelular.Location = new System.Drawing.Point(332, 167);
+            this.txtcelular.Mask = "(99) 00000-0000";
             this.txtcelular.Name = "txtcelular";
-            this.txtcelular.Size = new System.Drawing.Size(173, 31);
+            this.txtcelular.Size = new System.Drawing.Size(156, 31);
             this.txtcelular.TabIndex = 13;
             // 
             // label8
@@ -340,11 +340,11 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label8.Location = new System.Drawing.Point(324, 177);
+            this.label8.Location = new System.Drawing.Point(283, 174);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 24);
+            this.label8.Size = new System.Drawing.Size(43, 24);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Celular:";
+            this.label8.Text = "Cel:";
             // 
             // txttelefone
             // 
@@ -353,7 +353,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.txttelefone.Location = new System.Drawing.Point(137, 170);
             this.txttelefone.Mask = "(99) 0000-0000";
             this.txttelefone.Name = "txttelefone";
-            this.txttelefone.Size = new System.Drawing.Size(158, 31);
+            this.txttelefone.Size = new System.Drawing.Size(140, 31);
             this.txttelefone.TabIndex = 11;
             // 
             // label7
