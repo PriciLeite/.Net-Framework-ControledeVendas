@@ -65,9 +65,9 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.btnpesquisar = new System.Windows.Forms.Button();
             this.tabelacliente = new System.Windows.Forms.DataGridView();
-            this.txtpesquisa = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Btnnovo = new System.Windows.Forms.Button();
             this.Btneditar = new System.Windows.Forms.Button();
@@ -495,9 +495,9 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage2.Controls.Add(this.txtpesquisa);
             this.tabPage2.Controls.Add(this.btnpesquisar);
             this.tabPage2.Controls.Add(this.tabelacliente);
-            this.tabPage2.Controls.Add(this.txtpesquisa);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.tabPage2.Font = new System.Drawing.Font("Bell MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -511,15 +511,27 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.tabPage2.UseWaitCursor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // txtpesquisa
+            // 
+            this.txtpesquisa.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtpesquisa.Font = new System.Drawing.Font("Calisto MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpesquisa.ForeColor = System.Drawing.Color.Gray;
+            this.txtpesquisa.Location = new System.Drawing.Point(84, 39);
+            this.txtpesquisa.Name = "txtpesquisa";
+            this.txtpesquisa.Size = new System.Drawing.Size(378, 30);
+            this.txtpesquisa.TabIndex = 9;
+            this.txtpesquisa.UseWaitCursor = true;
+            this.txtpesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesquisa_KeyPress);
+            // 
             // btnpesquisar
             // 
             this.btnpesquisar.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.btnpesquisar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnpesquisar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnpesquisar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnpesquisar.Location = new System.Drawing.Point(473, 31);
+            this.btnpesquisar.Location = new System.Drawing.Point(477, 39);
             this.btnpesquisar.Name = "btnpesquisar";
-            this.btnpesquisar.Size = new System.Drawing.Size(112, 38);
+            this.btnpesquisar.Size = new System.Drawing.Size(113, 33);
             this.btnpesquisar.TabIndex = 8;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
@@ -550,24 +562,12 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
             this.tabelacliente.UseWaitCursor = true;
             this.tabelacliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelacliente_CellClick);
             // 
-            // txtpesquisa
-            // 
-            this.txtpesquisa.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtpesquisa.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.txtpesquisa.ForeColor = System.Drawing.Color.Gray;
-            this.txtpesquisa.Location = new System.Drawing.Point(89, 35);
-            this.txtpesquisa.Name = "txtpesquisa";
-            this.txtpesquisa.Size = new System.Drawing.Size(351, 31);
-            this.txtpesquisa.TabIndex = 4;
-            this.txtpesquisa.UseWaitCursor = true;
-            this.txtpesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesquisa_KeyPress);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Bell MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label14.Location = new System.Drawing.Point(19, 39);
+            this.label14.Location = new System.Drawing.Point(14, 42);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 24);
             this.label14.TabIndex = 3;
@@ -693,7 +693,6 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         private System.Windows.Forms.TextBox txtnumero;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtendereco;
-        private System.Windows.Forms.TextBox txtpesquisa;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.DataGridView tabelacliente;
@@ -706,5 +705,6 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox txtestado;
         private System.Windows.Forms.Button btnbuscar;
+        private System.Windows.Forms.TextBox txtpesquisa;
     }    
 }

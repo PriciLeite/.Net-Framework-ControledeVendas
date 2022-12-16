@@ -15,6 +15,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
 {
     public partial class Frmclientes : Form
     {
+        #region TAB
         public Frmclientes()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         {
 
         }
+        #endregion
 
 
 
@@ -149,33 +151,9 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         #region Novo - btnnovo
         private void btnnovo_Click(object sender, EventArgs e)
         {
-            // 1) Receber os dados dentro do objeto modelo de cliente
+            // Instanciando a classe LimparTela:
 
-            Cliente obj = new Cliente();
-
-
-            obj.nome = txtnome.Text;
-            obj.rg = txtrg.Text;
-            obj.cpf = txtcpf.Text;
-            obj.email = txtemail.Text;
-            obj.telefone = txttelefone.Text;
-            obj.celular = txtcelular.Text;
-            obj.endereco = txtendereco.Text;
-            obj.cep = txtcep.Text;
-            obj.numero = int.Parse(txtnumero.Text);
-            obj.complemento = txtcomplemento.Text;
-            obj.bairro = txtbairro.Text;
-            obj.cidade = txtcidade.Text;
-            obj.estado = txtestado.Text;
-
-            // 2) Criar um objeto da classe ClienteDAO e chamar o metodo cadastrarCliente
-
-            ClienteDAO dao = new ClienteDAO();
-            dao.cadastrarCliente(obj);
-
-            // atualizar o DataGredView
-            tabelacliente.DataSource = dao.listarCliente();
-
+            new Helpers().LimparTela(this);    
 
         }
         #endregion
@@ -283,7 +261,7 @@ namespace Projeto_Controle_de_Vendas.br.com.projeto.view
         #endregion
 
 
-
+        
     }
 
 }
