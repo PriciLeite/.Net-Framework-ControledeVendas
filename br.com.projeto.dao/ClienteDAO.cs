@@ -15,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Projeto_Controle_de_Vendas.br.com.projeto.dao
 {
-   public class ClienteDAO
+    public class ClienteDAO
     {
         private MySqlConnection conexao;
 
